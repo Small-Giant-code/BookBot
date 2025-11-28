@@ -16,7 +16,12 @@ no_of_characters = count_book_characters(filepath)
 #print(no_of_characters)
 
 list_of_dictionaries = sort_list(no_of_characters)
-print(list_of_dictionaries)
+for i in range(0, len(list_of_dictionaries)):
+    dict = list_of_dictionaries[i]
+    key = dict["char"]
+    value = dict["num"]
+    print(f"{key}: {value}")
+
 
 
 
