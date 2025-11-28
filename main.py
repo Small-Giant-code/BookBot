@@ -1,17 +1,19 @@
 import sys
 from stats import count_book_words, count_book_characters, sort_list
 
-print("Usage: python3  main.py /home/aronm/workspace/github.com/Small-Giant-Code/BookBot/books/frankenstein.txt")
-print(sys.argv)
 
+if len(sys.argv) <= 1:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 def get_book_text(filepath):
     with open(filepath) as f:
         file_contents = f.read()
     return file_contents
 
-filepath = sys.argv[0]
+filepath = sys.argv[1]
 book_text = get_book_text(filepath)
+#print(book_text)
 #print(book_text)
 
 total_words = count_book_words(filepath)
@@ -27,7 +29,7 @@ for i in range(0, len(list_of_dictionaries)):
     value = dict["num"]
     print(f"{key}: {value}")
 
-print(sys.argv)
+
 
 
 
