@@ -23,8 +23,9 @@ def sort_on(chars):
 def sort_list(no_of_characters):
     list_of_dictionaries = []
     for character in no_of_characters:
-        new_dictionary = {"char":character, "num": no_of_characters[character]}
-        list_of_dictionaries.append(new_dictionary)
+        if str(character).isalpha():
+            new_dictionary = {"char":character, "num": no_of_characters[character]}
+            list_of_dictionaries.append(new_dictionary)
     list_of_dictionaries.sort(reverse=True, key=sort_on)
     return list_of_dictionaries
 
