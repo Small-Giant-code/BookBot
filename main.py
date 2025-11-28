@@ -13,7 +13,7 @@ total_words = count_book_words(filepath)
 print(f"Found {total_words} total words")
 
 no_of_characters = count_book_characters(filepath)
-print(no_of_characters)
+#print(no_of_characters)
 
 list_of_dictionaries = sort_list(no_of_characters)
 print(list_of_dictionaries)
